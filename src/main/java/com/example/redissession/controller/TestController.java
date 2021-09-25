@@ -1,8 +1,6 @@
 package com.example.redissession.controller;
 
-<<<<<<< HEAD
-public class TestController {
-=======
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,5 +17,9 @@ public class TestController {
     public String test() {
         return "test domo--" + new Date().toString();
     }
->>>>>>> origin/master
+
+    @GetMapping(value = "/demo")
+    public String demo() {
+        return "domo--" + new Date().toString();
+    }
 }

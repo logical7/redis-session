@@ -14,11 +14,11 @@ import java.util.Date;
 public class TestController {
     @GetMapping(value = "/test")
     public String test() {
-        return "test domo--" + new Date().toString();
+        return "test demo--" + new Date();
     }
 
     @GetMapping(value = "/demo")
     public String demo() {
-        return "domo--" + new Date().toString();
+        return "demo--" + new Date();
     }
 }

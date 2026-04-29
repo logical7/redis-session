@@ -17,9 +17,9 @@ public class LoginController {
     /**
      * 这里为了能简单在浏览器响应，暂时使用GET请求，
      */
-    @PostMapping(value = "login")
+    @PostMapping(value = "/login")
     public String login(HttpServletRequest request) {
-
+        // TODO: 实现登录逻辑
         return "login failed";
     }
 
@@ -27,7 +27,7 @@ public class LoginController {
     /**
      * 判断用户的session是否有效（在同一个浏览器中，同一个域中，每次Request请求，都会带上Session）
      */
-    @GetMapping(value = "isValid")
+    @GetMapping(value = "/isValid")
     public String isSessionValid(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         if (session == null || session.getAttribute("account") == null) {

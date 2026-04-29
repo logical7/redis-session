@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @GetMapping("/get")
     public String get(String userName) {
-        return "Hello user";
+        return "Hello user: " + userName;
     }
 }
